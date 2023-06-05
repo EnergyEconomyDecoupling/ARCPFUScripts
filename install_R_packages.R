@@ -3,8 +3,8 @@
 
 print("Installing R packages")
 
-install.packages("stringi", 
-                 "targets",
+install.packages(c("stringi", 
+                   "targets"),
                  repos = "https://www.stats.bris.ac.uk/R/")
 
 library(devtools)
