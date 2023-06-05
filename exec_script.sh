@@ -17,17 +17,17 @@
 while getopts o:y:d:i: flag
 do
     case "${flag}" in
-        o) output_path=${OPTARG};;
-        y) years=${OPTARG};;
-        d) data_path=${OPTARG};;
-	i) inst_path=${OPTARG};;
+        o) pfu_output_path=${OPTARG};;
+        y) pfu_years=${OPTARG};;
+        d) pfu_data_path=${OPTARG};;
+        i) inst_path=${OPTARG};;
     esac
 done
 
 # Setting output path if not passed as input.
 # Detects whether we are on arc4.
 if [[ $SERVICE_NAME == "arc4" ]]; then
-	output_path=${o:-'/nobackup/earear/Results/Useful_Stage_EROIs/_targets'}
+	output_path=${o:-'/nobackup/$USER/Fellowship 1960-2015 PFU database/OutputData/_targets'}
 else
 	output_path=${o:-'tar_config_get("store")'}
 fi
@@ -40,20 +40,20 @@ fi
 #echo "Hostname: $HOSTNAME";
 
 # Replacing years if years is not empty
-if [[ ! -z "$years" ]]; then
-	sed -iE "s/^\(years_analysis_setup <- \).*$/\1 $years/" setup.R
+if [[ ! -z "$pfu_years" ]]; then
+	sed -iE "s/^\(years_analysis_setup <- \).*$/\1 $pfu_years/" setup.R
 fi
 
 # Replacing path to dataset
-if [[ ! -z "$data_path" ]]; then
-       sed -iE "s/^\(path_to_datasets_setup <- \).*$/\1 $data_path/" setup.R
+if [[ ! -z "$pfu_data_path" ]]; then
+       sed -iE "s/^\(path_to_datasets_setup <- \).*$/\1 $pfu_data_path/" setup.R
 fi
 
 # Replacing path to inst
-if [[ ! -z "$inst_path" ]]; then
-       sed -iE "s/^\(path_to_inst_setup <- \).*$/\1 $inst_path/" setup.R
+if [[ ! -z "$pfuinst_path" ]]; then
+       sed -iE "s/^\(path_to_inst_setup <- \).*$/\1 $pfu_inst_path/" setup.R
 fi
 
 
 # Running R script - add tar_make() at the end
-R -e "library(targets); targets::tar_config_set(store = '$output_path'); tar_make()"
+R -e "targets::tar_config_set(store = '$pfu_output_path'); targets::tar_make_future(workers = 8)"
