@@ -5,11 +5,12 @@ print("Installing R packages")
 
 install.packages(c("stringi", 
                    "targets"),
-                 repos = "https://www.stats.bris.ac.uk/R/")
+                   repos = "https://www.stats.bris.ac.uk/R/")
 
 library(devtools)
 
-update.packages(ask = FALSE)
+update.packages(ask = FALSE, 
+	            repos = "https://www.stats.bris.ac.uk/R/")
 
 devtools::install_github(c("MatthewHeun/RCLabels",
                            "MatthewHeun/matsbyname", 
