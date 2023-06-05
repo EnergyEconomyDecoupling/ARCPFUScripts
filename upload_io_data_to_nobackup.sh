@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script should be run from the user's local machine.
+# This script should NOT be run on ARC.
+
 echo "Upload InputData and OutputData to ARC nobackup directory"
 
 # -a: archive mode
