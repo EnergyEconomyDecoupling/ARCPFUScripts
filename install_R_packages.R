@@ -1,4 +1,5 @@
-# This script installs R packages.
+# This script installs R packages and is called
+# by prep_R_software_on_arc.sh.
 
 print("Installing R packages")
 
