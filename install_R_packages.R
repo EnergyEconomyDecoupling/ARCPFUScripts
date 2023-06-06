@@ -3,13 +3,13 @@
 
 print("Installing R packages")
 
-install.packages(c("stringi", 
-                   "targets"),
-                   repos = "https://www.stats.bris.ac.uk/R/")
+# install.packages(c("stringi",
+#                    "targets"),
+#                    repos = "https://www.stats.bris.ac.uk/R/")
 
 library(devtools)
 
-update.packages(ask = FALSE, 
+update.packages(ask = TRUE, 
 	            repos = "https://www.stats.bris.ac.uk/R/")
 
 devtools::install_github(c("MatthewHeun/MKHthemes",  
