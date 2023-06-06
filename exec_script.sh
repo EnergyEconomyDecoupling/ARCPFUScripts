@@ -21,7 +21,7 @@
 cd ~/github/PFUAggDatabase
 
 # Kick off the pipeline
-Rscript targets::tar_make_future(workers = 8)
+Rscript exec_script.R
 
 
 
