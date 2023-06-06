@@ -14,9 +14,13 @@
 #Get email at start and end of the job
 #$ -m be
 
+# Set up the conda environment
+conda activate r_env
+
 # Change to directory
 cd ~/github/PFUAggDatabase
 
+# Kick off the pipeline
 Rscript targets::tar_make_future(workers = 8)
 
 
