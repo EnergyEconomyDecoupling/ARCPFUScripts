@@ -21,7 +21,7 @@
 cd ~/github/PFUAggDatabase
 
 # Kick off the pipeline
-Rscript exec_script.R
+Rscript /nobackup/earmhe/ARCPFUScripts/exec_script.R
 
 
 
