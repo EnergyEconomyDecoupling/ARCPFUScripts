@@ -15,7 +15,7 @@
 #$ -m be
 
 # Set the number of cores
-#$ -pe smp 8
+#$ -pe smp 1
 
 # Change to directory
 cd ~/github/PFUAggDatabase
