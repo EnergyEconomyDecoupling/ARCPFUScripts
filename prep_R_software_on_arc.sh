@@ -13,5 +13,5 @@ conda activate r_env
 module switch intel gnu/8.3.0
 
 # Now install R packages via R script
-Rscript install_R_packages.R
+Rscript prep_R_software_on_arc.R
 
