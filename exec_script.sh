@@ -17,8 +17,8 @@
 # Set the number of cores
 #$ -pe smp 1
 
-# Change to directory
-cd ~/github/PFUAggDatabase
+# Change to directory where _targets.R file lives
+cd /nobackup/earmhe/github/PFUAggDatabase
 
 # Kick off the pipeline
 Rscript /nobackup/earmhe/ARCPFUScripts/exec_script.R
