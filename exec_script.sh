@@ -17,7 +17,7 @@
 # Change to directory
 cd ~/github/PFUAggDatabase
 
-Rscript targets::tar_make()
+Rscript targets::tar_make_future(workers = 8)
 
 
 
