@@ -17,9 +17,6 @@
 # Set the number of cores
 #$ -pe smp 8
 
-# Set up the conda environment
-conda activate r_env
-
 # Change to directory
 cd ~/github/PFUAggDatabase
 
