@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-#These lines will only be used when script submitted as a job to ARC4.
+# These lines will only be used when script submitted as a job to ARC4.
 
 #Run with current environment (-V) and in the current directory (-cwd)
 #$ -V -cwd
@@ -13,6 +13,9 @@
 
 #Get email at start and end of the job
 #$ -m be
+
+# Set the number of cores
+#$ -pe smp 8
 
 # Set up the conda environment
 conda activate r_env

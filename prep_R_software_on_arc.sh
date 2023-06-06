@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Run this script with 
 #   source prep_R_software.sh
