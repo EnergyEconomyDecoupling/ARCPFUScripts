@@ -14,14 +14,14 @@ update.packages(ask = FALSE,
 
 devtools::install_github(c("MatthewHeun/RCLabels",
                            "MatthewHeun/matsbyname", 
-					       "MatthewHeun/matsindf", 
-					       "MatthewHeun/IEATools", 
-					       "MatthewHeun/Recca", 
+                           "MatthewHeun/matsindf", 
+                           "MatthewHeun/IEATools", 
+                           "MatthewHeun/Recca", 
 					       "MatthewHeun/MKHthemes",  
 					       "EnergyEconomyDecoupling/MWTools", 
-						   "EnergyEconomyDecoupling/PFUPipelineTools",
+                           "EnergyEconomyDecoupling/PFUPipelineTools",
 					       "EnergyEconomyDecoupling/PFUSetup", 
-					       "EnergyEconomyDecoupling/PFUDatabase", 
-					       "EnergyEconomyDecoupling/PFUAggDatabase"))
+                           "EnergyEconomyDecoupling/PFUDatabase", 
+                           "EnergyEconomyDecoupling/PFUAggDatabase"))
 							   
 print("Completed installing R packages")
