@@ -11,4 +11,4 @@ echo "Upload InputData and OutputData to ARC nobackup directory"
 # -R: creates relative paths in destination
 # --delete deletes files on ARC4 if they have been deleted locally
 # /./ tells where to begin the copying
-rsync -azvR --delete -e ssh "~/Dropbox/./Fellowship 1960-2015 PFU database/InputData/" "~/Dropbox/./Fellowship 1960-2015 PFU database/OutputData/PipelineReleases" earmhe@arc4.leeds.ac.uk:"/nobackup/earmhe/"
+rsync -azvR --delete -e ssh "/Users/mkh2/Dropbox/./Fellowship 1960-2015 PFU database/InputData/" "/Users/mkh2/Dropbox/./Fellowship 1960-2015 PFU database/OutputData/PipelineReleases" earmhe@arc4.leeds.ac.uk:"/nobackup/earmhe/"
