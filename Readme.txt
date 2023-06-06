@@ -9,4 +9,5 @@ Then, the following commands may be helpful:
 * git checkout main
 * chmod 755 <<script_name.sh>>
 * git pull
+* git commit -m 'my notes' ./path/to/my/file.ext 
 * git push
