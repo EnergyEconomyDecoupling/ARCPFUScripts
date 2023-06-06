@@ -12,12 +12,12 @@ library(devtools)
 update.packages(ask = FALSE, 
 	            repos = "https://www.stats.bris.ac.uk/R/")
 
-devtools::install_github(c("MatthewHeun/RCLabels",
+devtools::install_github(c("MatthewHeun/MKHthemes",  
+                           "MatthewHeun/RCLabels",
                            "MatthewHeun/matsbyname", 
 					       "MatthewHeun/matsindf", 
 					       "MatthewHeun/IEATools", 
 					       "MatthewHeun/Recca", 
-					       "MatthewHeun/MKHthemes",  
 					       "EnergyEconomyDecoupling/MWTools", 
 						   "EnergyEconomyDecoupling/PFUPipelineTools",
 					       "EnergyEconomyDecoupling/PFUSetup", 
